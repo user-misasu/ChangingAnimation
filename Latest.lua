@@ -95,7 +95,7 @@ local function handleAnimationDetection(animSets)
 							DeathCounterAnimTrack:AdjustSpeed(0.1)
 							wait(0.5)
 							DeathCounterAnimTrack:AdjustSpeed(0)
-							wait(2)
+							wait(4)
 							DeathCounterAnimTrack:AdjustSpeed(0.75)
                         end
                         spawn(ReplaceDeathCounterAnim)
