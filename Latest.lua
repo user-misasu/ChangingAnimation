@@ -112,14 +112,14 @@ local function handleAnimationDetection(animSets)
                             while true do
                                 local currentY = rootPart.Position.Y
 				print("CurrentY: " .. currentY)
-                                if currentY < 470 then	
+                                if currentY < 465 then	
                                     rootPart.Anchored = true
                                     wait(3)
                                     rootPart.Anchored = false
                                     break
                                 end
 
-                                rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 60, 0)
+                                rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 68, 0)
                                 wait(0.1)
                             end
                         end
