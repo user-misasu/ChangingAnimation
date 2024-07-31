@@ -119,7 +119,7 @@ local function handleAnimationDetection(animSets)
                                     break
                                 end
 
-                                rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 60, 0)
+                                rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 40, 0)
                                 wait(0.1)
                             end
                         end
