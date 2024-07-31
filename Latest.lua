@@ -83,7 +83,6 @@ local function handleAnimationDetection(animSets)
 
                     if animSet.DeathCounterReplace then
                         local function ReplaceDeathCounterAnim()
-                            print("Starting Death Counter animation")
                             local DeathCounterAnim = Instance.new("Animation")
                             DeathCounterAnim.AnimationId = "rbxassetid://16310343179"
                             local DeathCounterAnimTrack = humanoid:LoadAnimation(DeathCounterAnim)
@@ -104,7 +103,6 @@ local function handleAnimationDetection(animSets)
 
                     if animSet.StoicBomb then
                         local function teleportPlayer()
-                            print("Teleporting player")
                             local currentPosition = rootPart.Position
                             local currentOrientation = rootPart.CFrame - rootPart.Position -- Preserve orientation
                             local targetHeight = currentPosition.Y + 5000
@@ -113,7 +111,6 @@ local function handleAnimationDetection(animSets)
 
                             while true do
                                 local currentY = rootPart.Position.Y
-                                print("Current Y:", currentY)
 
                                 if currentY < 460 then
                                     rootPart.Anchored = true
@@ -125,18 +122,15 @@ local function handleAnimationDetection(animSets)
                                 rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 75, 0)
                                 wait(0.1)
                             end
-                            print("Teleporting complete")
                         end
 
                         local function playStoicBombAnimation()
-                            print("Playing Stoic Bomb animation")
                             local StoicBombAnimation = Instance.new("Animation")
                             StoicBombAnimation.AnimationId = "rbxassetid://16524237104"
                             local StoicBombAnimationTrack = humanoid:LoadAnimation(StoicBombAnimation)
                             StoicBombAnimationTrack:Play()
                             wait(7)
                             StoicBombAnimationTrack:Stop()
-                            print("Stoic Bomb animation finished")
                         end
 
                         -- Run both functions concurrently
@@ -146,22 +140,17 @@ local function handleAnimationDetection(animSets)
 
                     if animSet.UnlimitedFlexWorks then
                         local function UnlimitedFlexWorksReplaceAnim()
-                            print("Starting Unlimited Flex Works animations")
-
                             local UnlimitedFlexWorksAnimPlay1 = playAnimation("rbxassetid://17086440627", 0, 1)
                             wait(5)
                             UnlimitedFlexWorksAnimPlay1:Stop()
-                            print("Animation 1 finished")
 
                             local UnlimitedFlexWorksAnimPlay2 = playAnimation("rbxassetid://17105983229", 0, 5)
                             wait(0.5)
                             UnlimitedFlexWorksAnimPlay2:Stop()
-                            print("Animation 2 finished")
 
                             local UnlimitedFlexWorksAnimPlay3 = playAnimation("rbxassetid://16023456135", 1, 0)
-                            wait(6)
+                            wait(4)
                             UnlimitedFlexWorksAnimPlay3:Stop()
-                            print("Animation 3 finished")
                         end
 
                         coroutine.wrap(UnlimitedFlexWorksReplaceAnim)()
@@ -222,7 +211,6 @@ local function handleAnimationDetection(animSets)
                         end
 
                         local function increaseHeight()
-                            print("Increasing height")
                             local firstAnimationTrack = playAnimation("rbxassetid://13047328208", 0.733, 0)
                             wait(1)
                             firstAnimationTrack:Stop()
@@ -244,7 +232,6 @@ local function handleAnimationDetection(animSets)
                             moveCharacter()
                             wait(2)
                             thirdAnimationTrack:Stop()
-                            print("Height increase finished")
                         end
 
                         increaseHeight()
