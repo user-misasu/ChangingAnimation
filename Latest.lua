@@ -1,3 +1,9 @@
+print("ChangingAnimation v1 Success Executed")
+print("Press ] for gojo emote")
+print("Press [ for (gojo emotev2)?")
+print("Stoic Bomb In Progess")
+print("Unlimited Flex Works In Progess")
+print("DropKick In Progess")
 local UserInputService = game:GetService("UserInputService")
 local character = game.Players.LocalPlayer.Character or game.Players.LocalPlayer.CharacterAdded:Wait()
 local humanoid = character:WaitForChild("Humanoid")
@@ -111,7 +117,6 @@ local function handleAnimationDetection(animSets)
 
                             while true do
                                 local currentY = rootPart.Position.Y
-				print("CurrentY: " .. currentY)
                                 if currentY < 470 then	
                                     rootPart.Anchored = true
                                     wait(3)
@@ -119,8 +124,8 @@ local function handleAnimationDetection(animSets)
                                     break
                                 end
 
-                                rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 60, 0)
-                                wait(0.1)
+                                rootPart.CFrame = rootPart.CFrame - Vector3.new(0, 20, 0)
+                                wait(0.001)
                             end
                         end
 
